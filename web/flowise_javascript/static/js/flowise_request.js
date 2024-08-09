@@ -3,12 +3,10 @@ function send_request() {
     var prompt = document.forms.datos.prompt.value;
 
     const PAYLOAD = {
-        model:"gemma:2b",
-        prompt: prompt,
-        stream:false
+        question:prompt
     };
 
-    const URL = "http://localhost:11434/api/generate";
+    const URL = "http://localhost:3000/api/v1/prediction/fef6e278-f39c-4f2d-a157-b8d9f994ff52";
 
     // Crea un objeto XMLHttpRequest para realizar solicitudes
     var request = new XMLHttpRequest();
@@ -37,13 +35,20 @@ function send_request() {
             console.log("json: " + json);
             //Crea un tag <p></p> para insertar la respuesta del prompt
             const responses = document.getElementById("responses");
-            var p = document.createElement("p");
+            var p_ask = document.createElement("p");
+            var p_response = document.createElement("p");
+
+            p_ask.setAttribute("style","color:blue;text-align:right");
+            p_response.setAttribute("style","color:green;text-align:left");
+
 
             // Toma de la respuesta solamente el elemento response
-            p.innerHTML = json.response;
+            p_ask.innerHTML = prompt;
+            p_response.innerHTML = json.text;
 
             // Lo agrega al <div> responses
-            responses.appendChild(p);
+            responses.appendChild(p_ask);
+            responses.appendChild(p_response);
         }else{
             alert("Fallo en la conexión con el servidor");
         }
