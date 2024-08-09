@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../static/js/ollama_request.js"></script>
+    <title>IA Generativa</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Realizar consulta a Ollama</h1>
+
+        <form name="datos">
+            <div class="mb-3">
+                <label for="prompt" class="form-label">prompt</label>
+                <input type="text" class="form-control" id="prompt" name="prompt" required placeholder="Prompt">
+            </div>
+            <input type="button" class='btn btn-primary' onclick="ollama_request()" value="Consultar">
+        </form>
+        <div id="responses">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
+</body>
+
+</html>

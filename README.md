@@ -6,17 +6,21 @@ Curso de Introducción al uso de LLM (Large Language Model, por sus siglas en in
 
 ### 0.1 ¿Qué es un modelo de LLM?
 
+Son modelos de [aprendizaje profundo](https://aws.amazon.com/es/what-is/deep-learning/) muy grandes que se preentrenan con grandes cantidades de datos. El [transformador](https://aws.amazon.com/es/what-is/transformers-in-artificial-intelligence/) subyacente es un conjunto de [redes neuronales](https://aws.amazon.com/es/what-is/neural-network/) que consta de un codificador y un decodificador con capacidades de autoatención. El codificador y el decodificador extraen significados de una secuencia de texto y comprenden las relaciones entre las palabras y las frases que contiene.
+
+A diferencia de las redes [neuronales recurrentes (RNN)](https://aws.amazon.com/es/what-is/recurrent-neural-network/) anteriores que procesaban las entradas de forma secuencial, los transformadores procesan secuencias enteras en paralelo. Esto permite a los científicos de datos utilizar las GPU para entrenar LLM basados en transformadores, lo que reduce significativamente el tiempo de entrenamiento. [AWS, 2024](https://aws.amazon.com/es/what-is/large-language-model/)
+
 Es un tipo de modelo de inteligencia artificial diseñado para comprender y generar texto de manera similar a cómo lo haría un ser humano
 
-Estos modelos son parte de una rama de la IA conocida como Procesamiento de Lenguaje Natural (NLP, por sus siglas en inglés), y se entrenan con grandes cantidades de texto para aprender **patrones** en el lenguaje.
+Estos modelos son parte de una rama de la IA conocida como [Procesamiento de Lenguaje Natural (NLP, por sus siglas en inglés)](https://aws.amazon.com/es/what-is/nlp/), y se entrenan con grandes cantidades de texto para aprender **patrones** en el lenguaje.
 
 Estos modelos pueden realizar tareas como el análisis de la lenguaje natural, la generación de lenguaje natural, la traducción y la razonamiento.
 
-Los llms son utilizados en una variedad de aplicaciones, como el chatbots, los traductores lingüísticos y sistemas de información entre otros (ChatGPT, 2024),(Gemini, 2024).
+Los **LLM** son utilizados en una variedad de aplicaciones, como el chatbots, los traductores lingüísticos y sistemas de información entre otros. ([Microsoft LLM, 2024](https://learn.microsoft.com/es-es/azure/databricks/generative-ai/generative-ai)), ([AWS LLM, 2024](https://aws.amazon.com/es/what-is/large-language-model/)), ([Google LLM, 2024](https://www.cloudskillsboost.google/course_templates/539/video/498105?locale=es))
 
 ### 0.2 Características de los LLM
 
-Algunas de las características de los LLM son (ChatGPT, 2024),(Gemini, 2024):
+Algunas de las características de los LLM son:
 
 1.	**Tamaño y Complejidad**: Los LLM suelen tener miles de millones de parámetros, lo que les permite capturar una amplia variedad de patrones lingüísticos. Cuantos más parámetros tiene un modelo, generalmente, mayor es su capacidad para entender y generar texto de forma **coherente**.
 
