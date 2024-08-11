@@ -5,6 +5,8 @@ function send_request() {
     const PAYLOAD = {
         model:"gemma:2b",
         prompt: prompt,
+        seed: 1234,
+        temperature: 0.5,
         stream:false
     };
 
